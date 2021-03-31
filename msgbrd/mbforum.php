@@ -184,7 +184,6 @@
 			echo "<p>Please sign in or create an account to use the message board.</p>";
 		}
 
-				//retrieve_messages();
 
 
 	?>

@@ -153,7 +153,7 @@ include ('header.html');
 			// Use it as a seed for uniqid, which when set to true generates a random number 23 digits in length
 			// Use it to seed md5 that creates a random string 32 characters in length
 
-			$a = md5(uniqid(rand(), true));
+			$a = md5(uniqid(rand(), true));	//token
 
 			// Add the user. By entering values in a different order from the form sql injection can be limited
 
@@ -184,14 +184,14 @@ include ('header.html');
 
 				// mysql_insert_id() retrieves the value of the last auto_incremented id
 				// Attach the random activation code in the link sent to the email
-				$body .= "http://localhost/msgbrd/mbactivate.php?x=" . mysql_insert_id() . "&y=$a";
+				//$body .= "http://localhost/msgbrd/mbactivate.php?x=" . mysql_insert_id() . "&y=$a";
 
-				mail($_POST['email'], 'Registration Confirmation', $body, 'From: derekbanas@verizon.net');
+				//mail($_POST['email'], 'Registration Confirmation', $body, 'From: derekbanas@verizon.net');
 
 
 				// Finish the page.
 
-				echo '<br /><br /><h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
+				echo '<br /><br /><h3>Thank you for registering! Click on the link to login.</h3>';
 
 				exit();
 
