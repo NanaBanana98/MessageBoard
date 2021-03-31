@@ -31,7 +31,7 @@ include ('header.html');
 
 	} else { //  Not logged in.
 
-	echo '	<a href="register.php">Register</a><br />
+	echo '	<a href="mbregister.php">Register</a><br />
 
 	<a href="login.php">Login to your account</a><br />
 
