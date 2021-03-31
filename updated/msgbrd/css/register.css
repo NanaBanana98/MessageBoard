@@ -1,0 +1,73 @@
+#header{
+    display:none;
+}
+
+
+#login{
+  order:1;
+  flex-direction: row;
+  justify-content:space-evenly;
+  margin-top: 3vh;
+  background-color: var(--purple);
+  padding: 3vh 0;
+  margin-top:0;
+
+}
+
+#login h4{
+    color: white;
+    font-size:5vh;
+}
+
+#login a{
+  text-decoration:none;
+  background-color: var(--purple-light);
+  border: 1px solid var(--purple);
+  border-radius: 3px;
+  line-height:2vh;
+  padding:10px;
+}
+
+#login a:hover{
+  text-decoration:none;
+  background-color: var(--purple);
+  border: 1px solid var(--purple-light);
+  border-radius: 3px;
+  line-height:2vh;
+  padding:10px;
+  cursor:pointer;
+  color:white;
+}
+
+#lypsum{
+    order:2;
+    dispaly:flex;
+   flex-direction:column;
+   align-items:center;
+    justify-content:center;
+    width:80%;
+    margin:auto;
+    min-height: 80vh;
+}
+
+#lypsum h2{
+  font-size:3vh;
+  margin: 2vh 0;
+}
+
+
+
+form .form_item input{
+  padding-right:0;
+  margin-right:0;
+  font-size:1.5vh;
+}
+
+
+
+
+#footer{
+    order:3;
+    margin-top:0;
+    height:3.9vh;
+}

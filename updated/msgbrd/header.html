@@ -1,0 +1,55 @@
+<?php
+
+// Start output buffering.
+
+ob_start();
+
+// Initialize a session.
+
+
+require_once('configmsgbrd.php');
+
+
+//////// End of connecting to database ////////
+session_start();
+
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Playing With Layouts</title>
+<style>
+
+body {
+	background-color: #FFF;
+}
+
+#header {
+	background-color: #006;
+	color: #FFF;
+	padding: 20px;
+}
+
+#footer {
+	background-color: #006;
+	color: #FFF;
+	padding: 20px;
+}
+
+#lypsum {
+
+}
+
+#login {
+
+	background-color: CornSilk;
+
+}
+
+</style>
+
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/master.css">
+
+</head>

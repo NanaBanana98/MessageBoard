@@ -1,0 +1,97 @@
+
+
+#main{
+  padding:none;
+  width:80%;
+}
+
+#main .commentSent{
+  background-color: var(--green-dark); /* Green */
+  margin: 15px 0;
+  color: white;
+  width: 100%;
+  font-family:arial;
+  font-size:2vh;
+  line-height: 5vh;
+}
+
+.commentBox{
+  margin-top: 3vh;
+  width:100%;
+  font-family:arial;
+  font-size:2vh;
+}
+
+.commentBox textarea{
+  width:99.5%;
+  font-family:arial;
+  font-size:2vh;
+  padding-top:1vh;
+}
+
+.commentBox button{
+  width:100%;
+  border: solid 1px var(--purple);
+  background-color: var(--purple-light);
+  font-size:2vh;
+  padding: 1vh;
+}
+
+.commentBox button:hover{
+    border: solid 1px var(--purple-light);
+  background-color: var(--purple);
+  color:white;
+  cursor: pointer;
+}
+
+.commentBox h3{
+  font-family:arial;
+  font-size: 4vh;
+  padding-bottom: 2.3vh;
+}
+
+
+.commentBox .comments{
+  margin: 3vh 0;
+
+}
+
+#login{
+  order:2;
+  flex-direction: row;
+  justify-content:space-evenly;
+  margin-top: 3vh;
+  background-color: var(--purple);
+  padding: 3vh 0;
+  margin-top:0;
+
+}
+
+#login h1{
+    color: white;
+    font-size:5vh;
+}
+
+#login a{
+  text-decoration:none;
+  background-color: var(--purple-light);
+  border: 1px solid var(--purple);
+  border-radius: 3px;
+  line-height:2vh;
+  padding:10px;
+}
+
+#login a:hover{
+  text-decoration:none;
+  background-color: var(--purple);
+  border: 1px solid var(--purple-light);
+  border-radius: 3px;
+  line-height:2vh;
+  padding:10px;
+  cursor:pointer;
+  color:white;
+}
+
+#header{
+  display:none;
+}

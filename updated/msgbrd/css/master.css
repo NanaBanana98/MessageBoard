@@ -1,0 +1,150 @@
+:root{
+  --red: #f55a4e;
+  --purple: #5a4ef5;
+  --green: #4ef55a;
+
+  --red-light: #f67166;
+  --purple-light: #f7f6fe;
+  --green-light: #7ef887;
+
+  --red-dark: #f22d1e;
+  --purple-dark: #1409a1;
+  --green-dark: #1ef22d;
+
+}
+body{
+  display: flex;
+  flex-direction: column;
+  font-family:arial;
+}
+
+#main{
+  order:2;
+  padding: 2vw 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 70%;
+  align-self: center;
+}
+
+#main p{
+  font-family: arial;
+  font-size: 2vh;
+  line-height: 2.3vh;
+}
+
+.error {
+  padding: 20px;
+  background-color: var(--red); /* Red */
+  margin: 15px 0;
+  color: white;
+  width: 100%;
+}
+
+.error p{
+  color: white;
+}
+
+#login{
+  order: 3;
+  width:100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+}
+
+ p{
+  font-family: arial;
+  font-size: 2vh;
+  line-height: 2.3vh;
+}
+
+#login h1{
+  font-family: arial;
+  font-size: 3vh;
+  line-height: 3.3vh;
+}
+
+ form{
+  width: 70%;
+}
+
+ form .form_item{
+  margin: 2vw 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+ form .form_item input{
+  margin: .5vw 0;
+  font-size: 2vh;
+  padding: 1vh;
+  border: 1px solid #c2c1bb;
+
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px var(--purple-light) inset !important;
+}
+
+ form .form_item .btn{
+  border: solid 1px var(--purple);
+  background-color: var(--purple-light);
+}
+
+ form .form_item .btn:hover{
+  border: solid 1px var(--purple-light);
+  background-color: var(--purple);
+  color:white;
+  cursor: pointer;
+}
+
+ a{
+  align-self: flex-start;
+  padding-left: 15%;
+  font-size: 1.5vh;
+}
+
+a:link{
+  color: var(--purple);
+}
+
+a:active, a:visited{
+  color: var(--purple-dark);
+}
+
+
+#header{
+  order: 1;
+  background-color: var(--purple);
+}
+
+#header h2{
+  font-family: arial;
+  font-size: 5vh;
+  color: white;
+}
+
+#footer{
+  background-color: var(--purple);
+  height:7vh;
+  margin-top: 5vh;
+}
+
+#wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
