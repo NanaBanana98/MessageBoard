@@ -33,7 +33,7 @@ include ('header.html');
 
 	echo '	<a href="mbregister.php">Register</a><br />
 
-	<a href="login.php">Login to your account</a><br />
+	<a href="mbforum.php">Login to your account</a><br />
 
 	<a href="forgot_password.php">Forgot Password</a><br />';
 
