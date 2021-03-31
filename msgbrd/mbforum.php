@@ -182,6 +182,11 @@
 		}
 		else{
 			echo "<p>Please sign in or create an account to use the message board.</p>";
+
+			if(isset($_GET['errorMsg']))
+			{
+				echo "<h3 class='error'>".$_GET['errorMsg']."</h3>";
+			}
 		}
 
 

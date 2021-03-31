@@ -24,7 +24,8 @@
 
 				  //check if empty feilds
 				  if( empty($username) || empty($password)){
-				    header("Location: ../index.php?error=emptyfeilds");
+						$error = 'Please fill in all fields.';
+				    header("Location: ./mbforum.php?error=emptyfeilds&errorMsg=".$error);
 				    exit();
 				  }
 				  //check that info matches that in database
@@ -39,7 +40,8 @@
 				    //check if conncetion is est
 				    if(!mysqli_stmt_prepare($stmt,$sql))
 				    {
-				      header("Location: ../index.php?error=sqlerror");
+							$error = 'We cannot authenticate user. System error.';
+				      header("Location: ../index.php?error=sqlerror&errorMsg=".$error);
 				      exit();
 				    }
 				    //if connect sucessfully
@@ -50,11 +52,12 @@
 				      $result = mysqli_stmt_get_result($stmt);
 				      if ($row = mysqli_fetch_assoc($result)) {
 				        //check pasword matches
-				        $passCheck = true;// SHA('$password') == $row['passwd']);
+				        $passCheck = password_verify($row['passwd']);
 				        //if wrong user
 				        if($passCheck == false)
 				        {
-				          header("Location: ../index.php?error=incorrectpassword&username=".$username);
+									$error = 'Your password is incorrect. Click Forgot Password to reset it.';
+									header("Location: ./mbforum.php?error=incorrectpassword&errorMsg=".$error);
 				          exit();
 				        }
 				        //evreything is correct! login user
@@ -70,14 +73,16 @@
 				          exit();
 				        }
 				        else{
-				          header("Location: ../index.php?error=incorrectpassword");
+									$error = 'Your password is incorrect. Click Forgot Password to reset it.';
+									header("Location: ./mbforum.php?error=incorrectpassword&errorMsg=".$error);
 				          exit();
 				        }
 				      }
 				      //otherwise error
 				      else{
-				        header("Location: ../index.php?error=userdne&username=".$stmt);
-				        exit();
+								$error = 'User does not exist. Please register.';
+				        header("Location: ./mbforum.php?error=userdne&errorMsg=".$error);
+
 				      }
 				    }
 				  }
